@@ -9,6 +9,7 @@ const GRAVITY: int = 1600
 const JUMP_SPEED: int = -600
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var gun_position: Marker2D = $GunPosition
 
 
 func _physics_process(delta: float) -> void:

@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://lii1uii2jsub"]
+
+[ext_resource type="Script" path="res://scenes/bullet/bullet.gd" id="1_tdf6a"]
+[ext_resource type="Texture2D" uid="uid://jk3r34be2s3t" path="res://scenes/bullet/sBullet_strip2.png" id="1_vvun0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8m04"]
+atlas = ExtResource("1_vvun0")
+region = Rect2(0, 0, 36, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_td6mk"]
+atlas = ExtResource("1_vvun0")
+region = Rect2(36, 0, 36, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_03n6u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8m04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_td6mk")
+}],
+"loop": false,
+"name": &"default",
+"speed": 60.0
+}]
+
+[node name="Bullet" type="Node2D"]
+script = ExtResource("1_tdf6a")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_03n6u")
+autoplay = "default"
+frame = 1
+frame_progress = 1.0
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

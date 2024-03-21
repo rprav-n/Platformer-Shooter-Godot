@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxe68uois15cd"]
+
+[ext_resource type="Script" path="res://scenes/Gun/gun.gd" id="1_iewfl"]
+[ext_resource type="Texture2D" uid="uid://bpscvh743v3ls" path="res://scenes/Gun/sGun.png" id="1_is8qj"]
+
+[node name="Gun" type="Node2D"]
+script = ExtResource("1_iewfl")
+
+[node name="ShootDelayTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[node name="MuzzleMarker" type="Marker2D" parent="."]
+position = Vector2(15, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_is8qj")
+offset = Vector2(4, 0)

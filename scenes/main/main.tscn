@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://db11npeci4ggj"]
+[gd_scene load_steps=6 format=3 uid="uid://db11npeci4ggj"]
 
 [ext_resource type="Texture2D" uid="uid://b1eyhpv1t1dm6" path="res://assets/sTiles.png" id="1_0fcr8"]
 [ext_resource type="PackedScene" uid="uid://dxkricbjvclxd" path="res://scenes/player/player.tscn" id="2_1me2s"]
+[ext_resource type="PackedScene" uid="uid://cxe68uois15cd" path="res://scenes/Gun/gun.tscn" id="3_vqb2a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ee6x"]
 texture = ExtResource("1_0fcr8")
@@ -54,3 +55,7 @@ layer_0/tile_data = PackedInt32Array(1376299, 458752, 2, 1376298, 393216, 2, 137
 
 [node name="Player" parent="." instance=ExtResource("2_1me2s")]
 position = Vector2(147, 190)
+
+[node name="Gun" parent="." instance=ExtResource("3_vqb2a")]
+
+[node name="Bullets" type="Node2D" parent="." groups=["bullets_layer"]]

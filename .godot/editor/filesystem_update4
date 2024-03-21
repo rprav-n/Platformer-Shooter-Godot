@@ -1,3 +1,7 @@
 res://scenes/main/main.tscn
 res://scenes/player/player.tscn
 res://scenes/player/player.gd
+res://scenes/Gun/gun.tscn
+res://scenes/Gun/gun.gd
+res://scenes/bullet/bullet.tscn
+res://scenes/bullet/bullet.gd

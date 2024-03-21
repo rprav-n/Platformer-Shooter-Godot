@@ -1,4 +1,9 @@
+VisibleOnScreenNotifier2D
+Marker2D
+Node2D
+AnimatedSprite2D
+Sprite2D
+Timer
 TileMap
 CollisionShape2D
-AnimatedSprite2D
 CharacterBody2D
