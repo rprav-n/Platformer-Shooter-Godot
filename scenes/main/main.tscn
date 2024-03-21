@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://db11npeci4ggj"]
+
+[ext_resource type="Texture2D" uid="uid://b1eyhpv1t1dm6" path="res://assets/sTiles.png" id="1_0fcr8"]
+[ext_resource type="PackedScene" uid="uid://dxkricbjvclxd" path="res://scenes/player/player.tscn" id="2_1me2s"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ee6x"]
+texture = ExtResource("1_0fcr8")
+texture_region_size = Vector2i(32, 32)
+4:2/0 = 0
+4:2/0/terrain_set = 0
+4:2/0/terrain = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:2/0/terrains_peering_bit/right_side = 0
+5:2/0 = 0
+5:2/0/terrain_set = 0
+5:2/0/terrain = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:2/0/terrains_peering_bit/right_side = 0
+5:2/0/terrains_peering_bit/left_side = 0
+6:2/0 = 0
+6:2/0/terrain_set = 0
+6:2/0/terrain = 0
+6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/0/physics_layer_0/angular_velocity = 0.0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:2/0/terrains_peering_bit/right_side = 0
+6:2/0/terrains_peering_bit/left_side = 0
+7:2/0 = 0
+7:2/0/terrain_set = 0
+7:2/0/terrain = 0
+7:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:2/0/physics_layer_0/angular_velocity = 0.0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:2/0/terrains_peering_bit/left_side = 0
+
+[sub_resource type="TileSet" id="TileSet_pvrxq"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_0ee6x")
+
+[node name="Main" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_pvrxq")
+format = 2
+layer_0/tile_data = PackedInt32Array(1376299, 458752, 2, 1376298, 393216, 2, 1376297, 327680, 2, 1376296, 393216, 2, 1376295, 327680, 2, 1376294, 393216, 2, 1376293, 327680, 2, 1376292, 327680, 2, 1376291, 393216, 2, 1376290, 393216, 2, 1376289, 393216, 2, 1376288, 393216, 2, 1376287, 393216, 2, 1376286, 393216, 2, 1376285, 393216, 2, 1376284, 393216, 2, 1376283, 393216, 2, 1376282, 327680, 2, 1376281, 393216, 2, 1376280, 393216, 2, 1376279, 393216, 2, 1376278, 327680, 2, 1376277, 327680, 2, 1376276, 327680, 2, 1376275, 327680, 2, 1376274, 393216, 2, 1376273, 327680, 2, 1376272, 327680, 2, 1376271, 393216, 2, 1376270, 393216, 2, 1376269, 327680, 2, 1376268, 393216, 2, 1376267, 327680, 2, 1376266, 327680, 2, 1376265, 327680, 2, 1376264, 393216, 2, 1376263, 327680, 2, 1376262, 327680, 2, 1376261, 327680, 2, 1376260, 327680, 2, 1376259, 393216, 2, 1376258, 327680, 2, 1376257, 327680, 2, 1376256, 327680, 2, 1441791, 393216, 2, 1441790, 393216, 2, 1114137, 458752, 2, 1114136, 393216, 2, 1114135, 327680, 2, 1114134, 327680, 2, 1114133, 327680, 2, 1114132, 393216, 2, 1114131, 262144, 2, 1114117, 458752, 2, 1114116, 393216, 2, 1114115, 393216, 2, 1114114, 327680, 2, 1114113, 262144, 2, 1441789, 262144, 2, 1376253, 458752, 2, 1310717, 458752, 2, 1245181, 458752, 2, 1179645, 458752, 2, 1114109, 458752, 2, 1048573, 458752, 2, 1310763, 262144, 2, 1245227, 262144, 2, 1179691, 262144, 2, 1114155, 262144, 2, 1048619, 262144, 2, 983083, 262144, 2, 917547, 458752, 2, 852011, 458752, 2, 786475, 458752, 2, 983037, 458752, 2, 917501, 458752, 2, 851965, 458752, 2, 852004, 458752, 2, 852003, 327680, 2, 852002, 393216, 2, 852001, 262144, 2)
+
+[node name="Player" parent="." instance=ExtResource("2_1me2s")]
+position = Vector2(147, 190)
